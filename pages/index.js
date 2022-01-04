@@ -1,5 +1,5 @@
 import TopBar from "../components/Navbar";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import PageLayout from "../components/PageLayout";
 import AuthorIntro from "../components/AuthorIntro";
 import CardItem from "../components/CardItem";
@@ -19,7 +19,7 @@ export default function Home({ blogs }) {
       >
         <div
           style={{
-            width: "150%",
+            width: "100%",
             height: "100%",
             // position: "absolute",
             top: "0%",
@@ -30,28 +30,31 @@ export default function Home({ blogs }) {
           <svg
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1400 120"
+            viewBox="0 0 1400 74"
+            width="100%"
+            height={120}
             preserveAspectRatio="none"
           >
             <path
-              d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+              d="M456.464 0.0433865C277.158 -1.70575 0 50.0141 0 50.0141V74H1440V50.0141C1440 50.0141 1320.4 31.1925 1243.09 27.0276C1099.33 19.2816 1019.08 53.1981 875.138 50.0141C710.527 46.3727 621.108 1.64949 456.464 0.0433865Z"
               class="shape-fill"
             ></path>
           </svg>
-
-          <div style={{ zIndex: "1" }}>
-            <Row className="mb-5">
-              {blogs.map((blog) => (
-                <Col key={blog.slug} md="4">
-                  <CardItem
-                    title={blog.title}
-                    subtitle={blog.subtitle}
-                    date={blog.date}
-                    image={blog.coverImage}
-                  />
-                </Col>
-              ))}
-            </Row>
+          <div style={{ zIndex: "1", backgroundColor: "#000000" }}>
+            <Container>
+              <Row className="mb-5">
+                {blogs.map((blog) => (
+                  <Col key={blog.slug} md="4">
+                    <CardItem
+                      title={blog.title}
+                      subtitle={blog.subtitle}
+                      date={blog.date}
+                      image={blog.coverImage}
+                    />
+                  </Col>
+                ))}
+              </Row>
+            </Container>
           </div>
         </div>
       </div>
