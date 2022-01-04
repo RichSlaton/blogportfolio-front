@@ -8,7 +8,8 @@ import { getAllBlogs } from "../lib/api";
 
 export default function Home({ blogs }) {
   return (
-    <PageLayout>
+   <PageLayout>
+
       <AuthorIntro />
 
       <hr />
@@ -16,11 +17,11 @@ export default function Home({ blogs }) {
         style={{ position: "relative", height: "500px" }}
         class="custom-shape-divider-top-1640978491 "
       >
-        <div 
+        <div
           style={{
             width: "150%",
             height: "100%",
-            position: "absolute",
+            // position: "absolute",
             top: "0%",
             left: "0",
             opacity: "0.8",
@@ -54,7 +55,8 @@ export default function Home({ blogs }) {
           </div>
         </div>
       </div>
-    </PageLayout>
+      </PageLayout >
+
   );
 }
 
